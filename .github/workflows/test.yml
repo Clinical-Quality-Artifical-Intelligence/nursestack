@@ -1,0 +1,61 @@
+name: Test Installer
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test Install Script
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Test Global Install
+        run: |
+          # Create a fake home directory to avoid permission issues and test isolation
+          mkdir -p /tmp/fake_home
+          HOME=/tmp/fake_home ./install.sh
+          
+          # Verify files were copied to the global location
+          if [ ! -d "/tmp/fake_home/.claude/commands" ]; then
+            echo "Global commands directory not created"
+            exit 1
+          fi
+          
+          # Check if one of the commands exists
+          if [ ! -f "/tmp/fake_home/.claude/commands/plan-clinical-review.md" ]; then
+            echo "Command file not copied globally"
+            exit 1
+          fi
+
+      - name: Test Project Install
+        run: |
+          # Create a fake project directory
+          mkdir -p /tmp/fake_project
+          cp -r * /tmp/fake_project/
+          cd /tmp/fake_project
+          
+          # Run the installer in project mode (we pipe 'n' to answer the CLAUDE.md prompt if it appears, or 'y')
+          echo 'y' | ./install.sh --project
+          
+          # Verify files were copied to the project location
+          if [ ! -d ".claude/commands" ]; then
+            echo "Project commands directory not created"
+            exit 1
+          fi
+          
+          # Check if one of the commands exists
+          if [ ! -f ".claude/commands/review-clinical-safety.md" ]; then
+            echo "Command file not copied to project"
+            exit 1
+          fi
+          
+          # Verify CLAUDE.md was copied
+          if [ ! -f "CLAUDE.md" ]; then
+            echo "CLAUDE.md template not copied"
+            exit 1
+          fi
