@@ -59,12 +59,12 @@ for cmd_file in "$COMMANDS_SOURCE"/*.md; do
     
     if [[ -f "$target" ]]; then
         echo -e "${YELLOW}⏭️  $filename already exists — skipping${NC}"
-        ((SKIPPED++))
+        ((SKIPPED++)) || true
     else
         cp "$cmd_file" "$target"
         cmd_name="${filename%.md}"
         echo -e "${GREEN}✅ /$cmd_name${NC}"
-        ((INSTALLED++))
+        ((INSTALLED++)) || true
     fi
 done
 

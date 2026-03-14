@@ -6,11 +6,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/lint.yml">
+  <a href="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions">
     <img src="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/lint.yml/badge.svg" alt="Lint">
   </a>
-  <a href="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/test.yml">
-    <img src="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/test.yml/badge.svg" alt="Test">
+  <a href="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions">
+    <img src="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/test.yml/badge.svg" alt="Test Installer">
   </a>
 </p>
 
