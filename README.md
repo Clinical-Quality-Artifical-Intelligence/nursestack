@@ -2,180 +2,163 @@
   <img src="https://img.shields.io/badge/Built_by-Nurse_Citizen_Developers-blue?style=for-the-badge" alt="Built by Nurse Citizen Developers">
   <img src="https://img.shields.io/badge/For-Claude_Code-purple?style=for-the-badge" alt="For Claude Code">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+  <img src="https://img.shields.io/badge/NMC-Aligned-red?style=for-the-badge" alt="NMC Aligned">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/lint.yml">
+    <img src="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/lint.yml/badge.svg" alt="Lint">
+  </a>
+  <a href="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/test.yml">
+    <img src="https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack/actions/workflows/test.yml/badge.svg" alt="Test">
+  </a>
 </p>
 
 # 🩺 NurseStack
 
 **Claude Code workflows built by nurses, for nurses.**
 
-5 healthcare-specific slash commands that give Claude Code a clinical brain — NMC standards, patient safety, FHIR compliance, Streamlit QA, and Hugging Face deployment. All in one install.
+**24 healthcare-specific slash commands** that give Claude Code a clinical brain — covering every stage of nursing: student assignments, clinical practice, academic research, dissertation writing, NHS funding bids, and tool development. All in one install.
 
 > *"Technology built by those who understand the ward is technology that works on the ward."*
 
-Created by [Clinical Quality Artificial Intelligence](https://github.com/Clinical-Quality-Artifical-Intelligence) — commands designed for **clinical nursing tool development** in the UK NHS context.
+Created by [Clinical Quality Artificial Intelligence](https://github.com/Clinical-Quality-Artifical-Intelligence) — open-source AI tools for UK nursing education and clinical practice.
 
 ---
 
-## ⚡ What You Get
+## ⚡ All 24 Commands
 
+### 🏥 Core Clinical Commands
 | Command | Role | What it does |
 |---|---|---|
-| `/plan-clinical-review` | Senior Clinical Nurse | NMC-aligned product review — ensures you're building the right thing for nurses and patients |
-| `/review-clinical-safety` | Clinical Safety Officer | DCB0129/DCB0160 safety audit — hazard identification, risk classification, mitigation |
-| `/qa-streamlit` | QA Engineer (Streamlit) | Test Streamlit apps locally or on Hugging Face Spaces — widgets, session state, clinical content |
+| `/plan-clinical-review` | Senior Clinical Nurse | NMC-aligned product review — are you building the right clinical tool? |
+| `/review-clinical-safety` | Clinical Safety Officer | DCB0129/DCB0160 safety audit — hazards, risk classification, mitigation |
+| `/qa-streamlit` | QA Engineer | Test Streamlit apps locally or on Hugging Face Spaces |
 | `/ship-hf` | Release Engineer | Ship to GitHub AND Hugging Face Spaces in one command |
-| `/review-fhir` | FHIR Specialist | FHIR IG profiling, terminology binding, UK NHS interoperability audit |
+| `/review-fhir` | FHIR Specialist | FHIR IG profiling, terminology binding, UK NHS interoperability |
 
-**5 commands. One install.**
+### 🎓 Student Nurse Commands
+| Command | Role | What it does |
+|---|---|---|
+| `/plan-assignment` | Academic Tutor | Deconstruct the question, map to NMC, produce full assignment structure |
+| `/review-reflection` | Practice Educator | Audit a placement reflection against Gibbs, Johns, or Driscoll |
+| `/review-clinical-reasoning` | Clinical Educator | Audit ADPIE documentation — Assessment through Evaluation |
+| `/scaffold-drug-calc` | Pharmacology Tutor | Step-by-step drug calculations with mandatory safety checks |
+
+### 👩‍🏫 Educator Commands
+| Command | Role | What it does |
+|---|---|---|
+| `/plan-lesson` | Curriculum Designer | Lesson plan mapped to NMC Standards with Bloom's Taxonomy outcomes |
+| `/review-simulation` | Simulation Specialist | Clinical accuracy + pedagogy audit for simulation scenarios |
+| `/review-curriculum` | NMC Audit Expert | Map any curriculum to NMC, NHS 10-Year Plan, and digital health standards |
+| `/review-feedback` | Assessment Specialist | Structure high-quality formative and summative feedback |
+
+### 🩺 Newly Qualified Nurse Commands
+| Command | Role | What it does |
+|---|---|---|
+| `/plan-revalidation` | Revalidation Advisor | Build your NMC revalidation portfolio — all 8 requirements |
+| `/review-preceptorship` | Preceptorship Lead | Review goals against NHS Preceptorship Framework 2022 |
+| `/plan-escalation` | Patient Safety Lead | SBAR escalation structure + NEWS2 urgency + escalation pathway |
+
+### 🔬 Research & Dissertation Commands
+| Command | Role | What it does |
+|---|---|---|
+| `/review-casp` | Research Specialist | Apply correct CASP checklist (RCT, SR, qualitative, cohort) — auto-selected |
+| `/plan-pico` | Research Librarian | PICO/PICo/PECO framework + MeSH/CINAHL search strategy |
+| `/plan-literature-review` | Systematic Review Expert | PRISMA flow, data extraction, thematic synthesis, chapter structure |
+| `/plan-dissertation` | Dissertation Supervisor | Full chapter structure, milestone timeline, methodology guidance |
+| `/review-evidence` | EBP Specialist | CEBM levels + GRADE assessment + common interpretation error checks |
+| `/plan-funding` | Grant Writer | NIHR / HEE / RCN Foundation application structure + PPI + plain English |
+| `/review-research-ethics` | Ethics Advisor | NHS REC / IRAS / GDPR / vulnerable populations / DCB0129 compliance |
+
+### 🛠️ Tool Development
+| Command | Role | What it does |
+|---|---|---|
+| `/scaffold-tool` | Streamlit Developer | Generate a complete new Streamlit nursing tool from scratch |
 
 ---
 
 ## 🎯 Who This Is For
 
-You're a **nurse citizen developer** — a registered nurse, nursing student, or practice educator who builds open-source clinical tools. You use Claude Code. You juggle multiple repos. You don't have a QA team, a release engineer, or a clinical safety officer on speed dial.
-
-NurseStack gives you all four.
+| Persona | Commands to Start With |
+|---|---|
+| **Student nurse** | `/plan-assignment`, `/review-reflection`, `/review-casp` |
+| **Nurse educator / practice educator** | `/plan-lesson`, `/review-curriculum`, `/review-simulation` |
+| **Newly qualified nurse** | `/plan-escalation`, `/review-preceptorship`, `/plan-revalidation` |
+| **Nurse researcher / PhD student** | `/plan-pico`, `/plan-dissertation`, `/review-casp`, `/plan-funding` |
+| **Nurse citizen developer** | `/scaffold-tool`, `/plan-clinical-review`, `/ship-hf` |
 
 ---
 
 ## 📦 Install
 
-### Prerequisites
-
-1. **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic's AI coding CLI
+### Prerequisite
+**[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic's AI coding CLI.
 
 ### Install NurseStack
 
-**Option A: Install globally** (available in all projects)
+**Option A: Global install** (available in all Claude Code sessions)
 ```bash
 git clone https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack.git /tmp/nursestack && /tmp/nursestack/install.sh && rm -rf /tmp/nursestack
 ```
 
-**Option B: Install in a specific project** (committed to repo, teammates get it)
+**Option B: Project install** (committed to your repo, teammates get it)
 ```bash
 git clone https://github.com/Clinical-Quality-Artifical-Intelligence/nursestack.git /tmp/nursestack && /tmp/nursestack/install.sh --project && rm -rf /tmp/nursestack
 ```
 
-**Option C: Manual** — Copy the `commands/` folder contents to `~/.claude/commands/` (global) or `.claude/commands/` (project).
+**Option C: Manual** — Copy any files from `commands/` to `~/.claude/commands/` (global) or `.claude/commands/` (project).
 
 ---
 
-## 🔬 Demo: Building a Nursing Tool
-
-Here's the full NurseStack workflow for building a wound assessment tool:
+## 🔬 Demo: Student Nurse Writing a Dissertation
 
 ```
-You: /plan-clinical-review
-     I want to build a wound assessment tool for nurses working with
-     patients of all skin tones.
+You: /plan-pico
+     I want to study whether simulation-based learning improves clinical
+     confidence in student nurses on their first placement.
 
-Claude: The real clinical need here isn't "wound assessment" — it's
-        equitable wound assessment. Current tools fail on darker skin
-        tones because they were trained on predominantly white skin...
-        
-        NMC Alignment: Platform 3 (Assessing needs), Platform 6 (Safety)
-        Patient Safety: Class 2 — indirect risk if assessment is inaccurate
-        Health Equity: HIGH POSITIVE IMPACT — directly addresses skin tone bias
-        
-        The 10-star version: AI-assisted wound staging calibrated across
-        Fitzpatrick I-VI, with visual reference guides for each skin tone...
+Claude: PICO Framework:
+        P: Pre-registration student nurses in Year 1 BSc programmes (UK)
+        I: High-fidelity simulation learning (≥4 hours, structured debrief)
+        C: Standard clinical placement without simulation exposure
+        O: Clinical confidence (measured by validated scale e.g. Lasater)
 
-You: /plan-eng-review
-Claude: [Architecture diagram, image pipeline, model selection, data flow]
+        Search Strategy:
+        CINAHL: (student nurs*) AND (simulation OR "high-fidelity") AND (confidence)
+        MeSH: "Nursing Students" AND "Patient Simulation" AND "Clinical Competence"
+        [Full search strings with Boolean operators provided]
 
-You: [build the feature]
+You: /review-casp
+     [pastes abstract of an RCT on simulation]
 
-You: /review
-Claude: [Code quality audit — race conditions, error handling, edge cases]
+Claude: CASP Tool: RCT Checklist (11 questions)
+        Quality Score: 8/11 — Moderate quality
+        Key limitation: No blinding possible (nature of simulation)
+        Suitable for dissertation inclusion: YES WITH CAVEATS
+        [Full 11-question analysis]
 
-You: /review-clinical-safety
-Claude: Safety Classification: Class 2 (indirect patient risk)
-        Hazard: Incorrect wound staging → delayed treatment
-        Mitigation: Always display confidence score + "verify clinically"
-        BLOCKER: Missing clinical disclaimer on results page
+You: /plan-dissertation
+     BSc Year 3, systematic review, 10,000 words
 
-You: /qa-streamlit
-Claude: [Tests the Streamlit app — widgets, session state, clinical content]
-        Clinical Accuracy Spot-Check:
-        - Stage 2 pressure ulcer classification: PASS
-        - Fitzpatrick VI wound colour assessment: PASS
-        Recommendation: Fix disclaimer, then ship
-
-You: /ship-hf
-Claude: GitHub:    ✅ Pushed abc1234 to origin/main
-        HF Spaces: ✅ Pushed to hf/main — building
-        App live at huggingface.co/spaces/NurseCitizenDeveloper/wound-assessment
+Claude: Chapter Structure with word counts...
+        Milestone timeline to submission...
+        Common pitfalls checklist...
 ```
-
----
-
-## 📋 Command Reference
-
-### `/plan-clinical-review`
-
-**Your clinical product lead.** Use this before building any nursing tool.
-
-Asks the hard clinical questions before a line of code is written:
-- Who is the real user? (Student on placement? Nurse on a night shift?)
-- Does this reinforce or replace clinical judgment?
-- Which NMC proficiency platforms does this serve?
-- What are the DCB0129 patient safety implications?
-- Could this widen or narrow health inequalities?
-- Would a charge nurse on a night shift actually use this?
-
-### `/review-clinical-safety`
-
-**Your clinical safety officer.** A structured DCB0129/DCB0160 audit.
-
-Performs:
-- Hazard identification (wrong info, unavailability, misinterpretation)
-- Risk classification (severity × likelihood → risk level)
-- Mitigation verification (disclaimers, validation, clinical verifiability)
-- Clinical content accuracy (BNF, NICE, NMC sources)
-- Information governance (GDPR, patient data handling)
-
-### `/qa-streamlit`
-
-**Your Streamlit QA engineer.** Tests Streamlit apps thoroughly:
-- App startup and dependency checks
-- UI rendering via browser testing
-- Session state and widget behaviour
-- Streamlit-specific quirks (reruns, caching)
-- Clinical content spot-checks
-- Hugging Face Spaces compatibility (requirements.txt, YAML config)
-
-### `/ship-hf`
-
-**Your release engineer for the full pipeline.** Ships to both GitHub and Hugging Face Spaces:
-- Pre-flight checks (git state, requirements.txt, README YAML, disclaimer)
-- Push to GitHub
-- Push to Hugging Face Spaces
-- Post-ship verification via browser testing
-
-### `/review-fhir`
-
-**Your FHIR interoperability specialist.** For the Open Nursing Core IG and FHIR projects:
-- R4 resource conformance
-- Terminology binding (SNOMED CT UK edition, LOINC, dm+d)
-- Nursing-specific profiles (NEWS2, Waterlow, ADPIE care plans)
-- UK NHS compatibility (UKCore, NHS Number, ODS codes)
-- IG publisher config validation
 
 ---
 
 ## 📐 NMC Standards Alignment
 
-All NurseStack commands are designed with the **NMC Standards of Proficiency for Registered Nurses (2018)** in mind:
-
-| Platform | NurseStack Coverage |
+| Platform | Commands That Cover It |
 |---|---|
-| 1. Being an accountable professional | `/plan-clinical-review` checks clinical accountability |
-| 2. Promoting health and preventing ill health | Health equity impact assessment |
-| 3. Assessing needs and planning care | Clinical content accuracy checks |
-| 4. Providing and evaluating care | `/qa-streamlit` clinical spot-checks |
-| 5. Leading and managing nursing care | Workflow supports team-based development |
-| 6. Improving safety and quality of care | `/review-clinical-safety` DCB0129 audit |
-| 7. Coordinating care | `/review-fhir` interoperability checks |
+| 1. Being an accountable professional | `/plan-clinical-review`, `/review-feedback`, `/plan-revalidation` |
+| 2. Promoting health and preventing ill health | `/plan-lesson`, `/review-curriculum` |
+| 3. Assessing needs and planning care | `/review-clinical-reasoning`, `/plan-pico`, `/plan-assignment` |
+| 4. Providing and evaluating care | `/scaffold-drug-calc`, `/qa-streamlit`, `/plan-escalation` |
+| 5. Leading and managing nursing care | `/review-preceptorship`, `/plan-funding` |
+| 6. Improving safety and quality of care | `/review-clinical-safety`, `/review-evidence`, `/review-casp` |
+| 7. Coordinating care | `/review-fhir`, `/review-research-ethics` |
 
 ---
 
@@ -183,42 +166,53 @@ All NurseStack commands are designed with the **NMC Standards of Proficiency for
 
 ```
 nursestack/
-├── README.md                          # This file
-├── LICENSE                            # MIT
-├── install.sh                         # Install script
+├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+├── install.sh
 ├── commands/
-│   ├── plan-clinical-review.md        # NMC-aligned clinical product review
-│   ├── review-clinical-safety.md      # DCB0129/DCB0160 safety audit
-│   ├── qa-streamlit.md                # Streamlit + HF Spaces QA
-│   ├── ship-hf.md                     # Ship to GitHub + Hugging Face
-│   └── review-fhir.md                # FHIR IG compliance audit
+│   ├── plan-clinical-review.md
+│   ├── review-clinical-safety.md
+│   ├── qa-streamlit.md
+│   ├── ship-hf.md
+│   ├── review-fhir.md
+│   ├── plan-assignment.md
+│   ├── review-reflection.md
+│   ├── review-clinical-reasoning.md
+│   ├── scaffold-drug-calc.md
+│   ├── plan-lesson.md
+│   ├── review-simulation.md
+│   ├── review-curriculum.md
+│   ├── review-feedback.md
+│   ├── plan-revalidation.md
+│   ├── review-preceptorship.md
+│   ├── plan-escalation.md
+│   ├── review-casp.md
+│   ├── plan-pico.md
+│   ├── plan-literature-review.md
+│   ├── plan-dissertation.md
+│   ├── review-evidence.md
+│   ├── plan-funding.md
+│   ├── review-research-ethics.md
+│   └── scaffold-tool.md
 ├── templates/
-│   └── CLAUDE.md                      # Drop-in project config
+│   ├── CLAUDE.md
+│   ├── CLAUDE-student.md
+│   ├── CLAUDE-educator.md
+│   └── CLAUDE-nqn.md
 └── examples/
-    └── workflow-demo.md               # Full workflow example
-```
-
----
-
-## 🔄 Recommended Workflow
-
-```mermaid
-graph LR
-    A["/plan-clinical-review"] --> B["Build"]
-    B --> C["/review-clinical-safety"]
-    C --> D["/qa-streamlit"]
-    D --> E["/ship-hf"]
+    └── workflow-demo.md
 ```
 
 ---
 
 ## 🤝 Contributing
 
-NurseStack is built by the **Nurse Citizen Developer** community. Contributions welcome!
+NurseStack is built by the **Nurse Citizen Developer** community. See [CONTRIBUTING.md](CONTRIBUTING.md) for our clinical contribution standards.
 
-- **New commands** — Got a clinical workflow that needs a dedicated mode? Open a PR.
-- **Improve existing commands** — Better prompts, more clinical checks, wider coverage.
-- **Bug reports** — If a command gives clinically inappropriate advice, that's a safety issue. Report it.
+- **New commands** — Open an issue first with the clinical problem and NMC alignment
+- **Clinical safety issues** — Label as `clinical-safety` for immediate priority review
+- **Improvements** — Better prompts, wider clinical coverage, more realistic examples
 
 ---
 
@@ -232,7 +226,7 @@ A UK-based open-source organisation building free AI tools for nursing education
 **Key Collaborator:** Kelly Thobekile Ncube, RN — Senior Lecturer in Adult Nursing (SFHEA) | Global Health Lecturer Volunteer Fellow
 
 ### Powered By
-- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** by Anthropic — the AI coding assistant that powers it all
+**[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** by Anthropic — the AI coding assistant that powers it all.
 
 ---
 
