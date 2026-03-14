@@ -42,20 +42,9 @@ if ! command -v claude &> /dev/null; then
     echo "   (NurseStack will still install — you just need Claude Code to use it)"
 fi
 
-# Check gstack
-if [[ -d "$HOME/.claude/skills/gstack" ]]; then
-    echo -e "${GREEN}✅ gstack found${NC}"
-else
-    echo -e "${YELLOW}⚠️  gstack not found at ~/.claude/skills/gstack${NC}"
-    echo "   gstack is recommended but not required for NurseStack."
-    echo "   Install: git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup"
-    echo ""
-    read -p "   Continue without gstack? (y/n) " -n 1 -r
-    echo ""
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        echo "Install cancelled."
-        exit 1
-    fi
+# Check Claude Code installation
+if command -v claude &> /dev/null; then
+    echo -e "${GREEN}✅ Claude Code found${NC}"
 fi
 
 # Create install directory

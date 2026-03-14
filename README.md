@@ -12,7 +12,7 @@
 
 > *"Technology built by those who understand the ward is technology that works on the ward."*
 
-Built on top of [gstack](https://github.com/garrytan/gstack) by [Garry Tan](https://x.com/garrytan). NurseStack extends gstack with commands designed for **clinical nursing tool development** in the UK NHS context.
+Created by [Clinical Quality Artificial Intelligence](https://github.com/Clinical-Quality-Artifical-Intelligence) — commands designed for **clinical nursing tool development** in the UK NHS context.
 
 ---
 
@@ -26,9 +26,7 @@ Built on top of [gstack](https://github.com/garrytan/gstack) by [Garry Tan](http
 | `/ship-hf` | Release Engineer | Ship to GitHub AND Hugging Face Spaces in one command |
 | `/review-fhir` | FHIR Specialist | FHIR IG profiling, terminology binding, UK NHS interoperability audit |
 
-Plus all 8 original **gstack commands**: `/plan-ceo-review`, `/plan-eng-review`, `/review`, `/ship`, `/browse`, `/qa`, `/setup-browser-cookies`, `/retro`
-
-**Total: 13 commands. One install.**
+**5 commands. One install.**
 
 ---
 
@@ -44,15 +42,7 @@ NurseStack gives you all four.
 
 ### Prerequisites
 
-1. **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic's CLI
-2. **[gstack](https://github.com/garrytan/gstack)** — Install first:
-   ```bash
-   git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup
-   ```
-3. **[Bun](https://bun.sh/)** v1.0+ (required by gstack for `/browse`):
-   ```bash
-   curl -fsSL https://bun.sh/install | bash
-   ```
+1. **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Anthropic's AI coding CLI
 
 ### Install NurseStack
 
@@ -123,7 +113,7 @@ Claude: GitHub:    ✅ Pushed abc1234 to origin/main
 
 ### `/plan-clinical-review`
 
-**Your clinical product lead.** Use this INSTEAD of `/plan-ceo-review` when building nursing tools.
+**Your clinical product lead.** Use this before building any nursing tool.
 
 Asks the hard clinical questions before a line of code is written:
 - Who is the real user? (Student on placement? Nurse on a night shift?)
@@ -148,7 +138,7 @@ Performs:
 
 **Your Streamlit QA engineer.** Tests Streamlit apps thoroughly:
 - App startup and dependency checks
-- UI rendering via `/browse`
+- UI rendering via browser testing
 - Session state and widget behaviour
 - Streamlit-specific quirks (reruns, caching)
 - Clinical content spot-checks
@@ -160,7 +150,7 @@ Performs:
 - Pre-flight checks (git state, requirements.txt, README YAML, disclaimer)
 - Push to GitHub
 - Push to Hugging Face Spaces
-- Post-ship verification via `/browse`
+- Post-ship verification via browser testing
 
 ### `/review-fhir`
 
@@ -183,7 +173,7 @@ All NurseStack commands are designed with the **NMC Standards of Proficiency for
 | 2. Promoting health and preventing ill health | Health equity impact assessment |
 | 3. Assessing needs and planning care | Clinical content accuracy checks |
 | 4. Providing and evaluating care | `/qa-streamlit` clinical spot-checks |
-| 5. Leading and managing nursing care | `/retro` for team reflection |
+| 5. Leading and managing nursing care | Workflow supports team-based development |
 | 6. Improving safety and quality of care | `/review-clinical-safety` DCB0129 audit |
 | 7. Coordinating care | `/review-fhir` interoperability checks |
 
@@ -214,13 +204,10 @@ nursestack/
 
 ```mermaid
 graph LR
-    A["/plan-clinical-review"] --> B["/plan-eng-review"]
-    B --> C["Build"]
-    C --> D["/review"]
-    D --> E["/review-clinical-safety"]
-    E --> F["/qa-streamlit"]
-    F --> G["/ship-hf"]
-    G --> H["/retro"]
+    A["/plan-clinical-review"] --> B["Build"]
+    B --> C["/review-clinical-safety"]
+    C --> D["/qa-streamlit"]
+    D --> E["/ship-hf"]
 ```
 
 ---
@@ -244,15 +231,14 @@ A UK-based open-source organisation building free AI tools for nursing education
 
 **Key Collaborator:** Kelly Thobekile Ncube, RN — Senior Lecturer in Adult Nursing (SFHEA) | Global Health Lecturer Volunteer Fellow
 
-### Credits
-- **[gstack](https://github.com/garrytan/gstack)** by Garry Tan — NurseStack is built on top of gstack's excellent foundation
+### Powered By
 - **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** by Anthropic — the AI coding assistant that powers it all
 
 ---
 
 ## 📄 License
 
-MIT — same as gstack. Free to use, modify, and distribute.
+MIT. Free to use, modify, and distribute.
 
 ---
 
